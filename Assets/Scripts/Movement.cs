@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rg = GetComponent<Rigidbody>();
-        speed = 2f;
+        speed = 5f;
 	}
 	
 	// Update is called once per frame
