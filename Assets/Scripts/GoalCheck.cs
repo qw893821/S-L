@@ -11,7 +11,6 @@ public class GoalCheck : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(Check());
         if (Check())
         {
             door.GetComponent<Renderer>().enabled = false;

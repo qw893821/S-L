@@ -2,6 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+[System.Serializable]
+public class Save
+{
+    public List<float> savePosX=new List<float>();
+    public List<float> savePosY = new List<float>();
+    public List<float> savePosZ = new List<float>();
+    public List<bool> saveBool=new List<bool>();
+    public float savePlayerPosX;
+    public float savePlayerPosY;
+    public float savePlayerPosZ;
+    public string savedSceneName;
+}
 
 public class GeneralManager : MonoBehaviour {
     private static GeneralManager _gm;
