@@ -15,7 +15,6 @@ public class PreviousEnter : MonoBehaviour {
             if (currentName == "Scene_" + i.ToString())
             {
                 preName = "Scene_" + (i - 1).ToString();
-                Debug.Log(preName);
                 break;
             }
         }
@@ -24,6 +23,7 @@ public class PreviousEnter : MonoBehaviour {
     {
         if (col.tag == "Player")
         {
+            GeneralManager.gm.isReturn = true;
             SceneManager.LoadScene(preName, LoadSceneMode.Single);
         }
     }

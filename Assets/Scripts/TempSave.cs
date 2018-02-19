@@ -19,13 +19,13 @@ public class TempSave:MonoBehaviour{
         {
             _instance = this;
         }
-        
-    }
-    private void Start()
-    {
         slots = GameObject.FindGameObjectsWithTag("Slot");
         tempPos = new Vector3[slots.Length];
         tempBool = new bool[slots.Length];
+    }
+    private void Start()
+    {
+        
     }
 
     public void GetTemp()
@@ -33,12 +33,23 @@ public class TempSave:MonoBehaviour{
         
         for(int i = 0; i < slots.Length; i++)
         {
-            tempPos[i] = slots[i].transform.position;
+            
             tempBool[i] = slots[i].GetComponent<Renderer>().enabled;
+            if (tempBool[i])
+            {
+                tempPos[i] = slots[i].transform.position;
+               
+            }
+            else { tempPos[i] = Vector3.zero; }
         }
     }
 
     private void Update()
+    {
+        FindSlots();
+    }
+
+    public void FindSlots()
     {
         if (slots[0] == null)
         {

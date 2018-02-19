@@ -9,13 +9,16 @@ public class GeneralManager : MonoBehaviour {
         get { return _gm; }
     }
     public bool newgame;
+    public bool isReturn;
     public GameObject[] temp;
+    float timer;
     private void Awake()
     {
         if (_gm != null) { Destroy(this.gameObject); }
         else if (_gm == null) { _gm = this; }       
         DontDestroyOnLoad(transform.gameObject);
         newgame = true;
+        isReturn = false;
     }
     // Use this for initialization
     void Start () {
@@ -23,7 +26,26 @@ public class GeneralManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-        LateSet(1f);
+        if (isReturn)
+        {
+            timer += Time.deltaTime;
+            foreach(GameObject go in TempSave.instance.slots)
+            {
+                go.GetComponent<Renderer>().enabled = false;
+                foreach(Vector3 v3 in TempSave.instance.tempPos)
+                {
+                    if (go.transform.position == v3)
+                    {
+                        go.GetComponent<Renderer>().enabled = true;
+                    }
+                }
+            }
+        }
+        if (timer >= 1f)
+        {
+            isReturn = false;
+            timer = 0;
+        }
 	}
 
     //gos1 is current scene slot, gos2 is previous scene slot
@@ -41,7 +63,6 @@ public class GeneralManager : MonoBehaviour {
         {
             if (Random.Range(0, 1f) > 0.5f)
             {
-                Debug.Log("false");
                 go.GetComponent<Renderer>().enabled = false;
             }
             else if (Random.Range(0, 1f) <= 0.5f)
@@ -60,12 +81,5 @@ public class GeneralManager : MonoBehaviour {
         
         
     }
-    private IEnumerator LateSet(float timer)
-    {
-        while (true)
-        {
-            RandomVB();
-        }
-    }
-
+   
 }

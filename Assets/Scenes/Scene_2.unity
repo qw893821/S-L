@@ -369,6 +369,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 65645182774184916, guid: 9e9bec3372b83db4f9c28932588f530a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e9bec3372b83db4f9c28932588f530a, type: 2}
   m_IsPrefabParent: 0
@@ -538,6 +543,16 @@ Prefab:
       propertyPath: m_TagString
       value: Slot
       objectReference: {fileID: 0}
+    - target: {fileID: 23874417842244374, guid: 9e9bec3372b83db4f9c28932588f530a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65645182774184916, guid: 9e9bec3372b83db4f9c28932588f530a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e9bec3372b83db4f9c28932588f530a, type: 2}
   m_IsPrefabParent: 0
@@ -592,6 +607,16 @@ Prefab:
     - target: {fileID: 1673143178904986, guid: 9e9bec3372b83db4f9c28932588f530a, type: 2}
       propertyPath: m_TagString
       value: Slot
+      objectReference: {fileID: 0}
+    - target: {fileID: 23874417842244374, guid: 9e9bec3372b83db4f9c28932588f530a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65645182774184916, guid: 9e9bec3372b83db4f9c28932588f530a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e9bec3372b83db4f9c28932588f530a, type: 2}
@@ -686,6 +711,7 @@ GameObject:
   - component: {fileID: 700424769}
   - component: {fileID: 700424768}
   - component: {fileID: 700424767}
+  - component: {fileID: 700424771}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -759,6 +785,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &700424771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 700424766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bbb9bb1b517cf14ea522fb427df8926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 1955162325}
 --- !u!1001 &744582590
 Prefab:
   m_ObjectHideFlags: 0
@@ -805,6 +843,16 @@ Prefab:
     - target: {fileID: 1673143178904986, guid: 9e9bec3372b83db4f9c28932588f530a, type: 2}
       propertyPath: m_TagString
       value: Slot
+      objectReference: {fileID: 0}
+    - target: {fileID: 23874417842244374, guid: 9e9bec3372b83db4f9c28932588f530a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65645182774184916, guid: 9e9bec3372b83db4f9c28932588f530a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e9bec3372b83db4f9c28932588f530a, type: 2}
@@ -1185,6 +1233,16 @@ Prefab:
     - target: {fileID: 1673143178904986, guid: 9e9bec3372b83db4f9c28932588f530a, type: 2}
       propertyPath: m_TagString
       value: Slot
+      objectReference: {fileID: 0}
+    - target: {fileID: 23874417842244374, guid: 9e9bec3372b83db4f9c28932588f530a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65645182774184916, guid: 9e9bec3372b83db4f9c28932588f530a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e9bec3372b83db4f9c28932588f530a, type: 2}
@@ -1952,7 +2010,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1636974747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b72e5af8b8c134ea73b04800ae1e41, type: 3}
+  m_Script: {fileID: 11500000, guid: eeb35c82b267f3d489bde83ba6606790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1669874223
@@ -2118,6 +2176,16 @@ Prefab:
       propertyPath: m_TagString
       value: Slot
       objectReference: {fileID: 0}
+    - target: {fileID: 23874417842244374, guid: 9e9bec3372b83db4f9c28932588f530a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65645182774184916, guid: 9e9bec3372b83db4f9c28932588f530a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e9bec3372b83db4f9c28932588f530a, type: 2}
   m_IsPrefabParent: 0
@@ -2240,7 +2308,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1955162325}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

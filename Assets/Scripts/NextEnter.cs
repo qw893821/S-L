@@ -15,7 +15,6 @@ public class NextEnter : MonoBehaviour {
             if (currentName == "Scene_" + i.ToString())
             {
                 nextName = "Scene_" + (i + 1).ToString();
-                Debug.Log(nextName);
                 break;
             }
         }
