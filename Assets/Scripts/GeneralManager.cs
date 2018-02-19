@@ -24,6 +24,7 @@ public class GeneralManager : MonoBehaviour {
     public bool isReturn;
     public GameObject[] temp;
     float timer;
+    public GameObject player;
     private void Awake()
     {
         if (_gm != null) { Destroy(this.gameObject); }
@@ -31,6 +32,7 @@ public class GeneralManager : MonoBehaviour {
         DontDestroyOnLoad(transform.gameObject);
         newgame = true;
         isReturn = false;
+        Instantiate(player);
     }
     // Use this for initialization
     void Start () {
