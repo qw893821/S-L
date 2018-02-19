@@ -24,6 +24,7 @@ public class NextEnter : MonoBehaviour {
     //when enter the game, load next scene
     private void OnTriggerEnter(Collider col)
     {
+        TempSave.instance.GetTemp();
         if (col.tag == "Player")
         {
             SceneManager.LoadScene(nextName, LoadSceneMode.Single);

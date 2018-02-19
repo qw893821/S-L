@@ -9,15 +9,21 @@ public class Movement : MonoBehaviour {
 	void Start () {
         rg = GetComponent<Rigidbody>();
         speed = 5f;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    private void Awake()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update () {
         float h, v;
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
         Move(h, v);
-	}
+
+    }
 
     void Move(float x, float z)
     {
